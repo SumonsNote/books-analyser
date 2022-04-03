@@ -55,6 +55,7 @@ const Dashboard = () => {
   return (
     <div className="grid-cols-2 px-10 mt-10 flex">
       <div>
+      <h2 className="text-3xl uppercase py-5 font-bold text-sky-600">investment vs revenue</h2>
       <AreaChart width={730} height={450} data={data}
   margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
   <defs>
@@ -77,6 +78,7 @@ const Dashboard = () => {
 </AreaChart>
       </div>
       <div>
+      <h2 className="text-3xl uppercase py-5 font-bold text-sky-600">investment vs revenue</h2>
         <ComposedChart width={730} height={450} data={data}>
           <XAxis dataKey="month" />
           <YAxis />
