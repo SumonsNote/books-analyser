@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import useReview from "../CustomHook/CustomHook";
 import Review from "../Review/Review";
+import ReviewDetail from "../ReviewDetail/ReviewDetail";
 
 const Home = () => {
 
@@ -35,7 +36,7 @@ const Home = () => {
         <h2 className="text-3xl font-bold">Customer reviews (3)</h2>
         <div className="grid grid-cols-3 px-20 gap-3 p-4 mt-20">
             {
-                review.map(review => <Review review={review} key={review.id}></Review>)
+                review.map(review => <ReviewDetail review={review} key={review.id}></ReviewDetail>)
             }
         </div>
         <div className="customer-review-all mt-20 mb-20">

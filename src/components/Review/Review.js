@@ -1,13 +1,17 @@
 import React from 'react';
+import useReview from '../CustomHook/CustomHook';
+import ReviewDetail from '../ReviewDetail/ReviewDetail';
 
-const Review = (props) => {
-    const {name, review, rating} = props.review;
+const Review = () => {
+    const [reviews, setReviews] = useReview([])
+
     return (
-        <div className='border-2 p-4 leading-2'>
-            <div className='left'>
-            <h2 className='font-bold text-xl'>Name: {name}</h2>
-            <h2><span className='font-bold'>Review</span>: {review}</h2>
-            <h2 className='font-bold'>Rating: {rating}</h2>
+        <div>
+        <h2 className='text-4xl font-bold py-10'>All Reviews</h2>
+            <div className='p-4 leading-2 grid grid-cols-3 gap-4'>
+            {
+                reviews.map(review => <ReviewDetail review={review}></ReviewDetail>)
+            }
             </div>
         </div>
     );

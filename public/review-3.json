@@ -16,5 +16,23 @@
         "name": "Nayeem Khan",
         "review": "I have read this book 3 times because this teaches how to change mind and how to think out of the box. If someone read one time surely can change the mind",
         "rating": 5
+    },
+    {
+        "id": 4,
+        "name": "Al-amin",
+        "review": "Outstanding book I have ever read I recommend that you please read it",
+        "rating": 4
+    },
+    {
+        "id": 5,
+        "name": "Nazmul Hossain",
+        "review": "In this book, writer has shown the way how to fix random think in mind I fixed my mind by reading this book. Awesome!",
+        "rating": 5
+    },
+    {
+        "id": 6,
+        "name": "Jinnah Ali",
+        "review": "I have read the book but the book is something better but not recommended because it throws out of mind",
+        "rating": 2
     }
 ]
