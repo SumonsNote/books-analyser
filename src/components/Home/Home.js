@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import useReview from "../CustomHook/CustomHook";
+import Review from "../Review/Review";
 
 const Home = () => {
+
+    const [review, setReview] = useReview([])
+    const navigate = useNavigate()
+    
   return (
     <div>
       <div className="flex container mx-auto px-20 justify-between items-center mt-10">
@@ -25,9 +32,14 @@ const Home = () => {
         </div>
       </div>
       <div className="customer-review mt-20">
-        <h2 className="text-3xl font-bold">Customer review (3)</h2>
-        <div className="customer-review-all mt-40 mb-20">
-            <button className="bg-blue-400 rounded-md p-4 text-white font-bold">See All Reviews</button>
+        <h2 className="text-3xl font-bold">Customer reviews (3)</h2>
+        <div className="grid grid-cols-3 px-20 gap-3 p-4 mt-20">
+            {
+                review.map(review => <Review review={review} key={review.id}></Review>)
+            }
+        </div>
+        <div className="customer-review-all mt-20 mb-20">
+            <button onClick={() => navigate('/review')} className="bg-blue-400 rounded-md p-4 text-white font-bold">See All Reviews</button>
         </div>
       </div>
     </div>
