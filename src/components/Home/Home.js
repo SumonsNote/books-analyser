@@ -1,14 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import useReview from "../CustomHook/CustomHook";
-import Review from "../Review/Review";
 import ReviewDetail from "../ReviewDetail/ReviewDetail";
 
 const Home = () => {
 
-    const [review, setReview] = useReview([])
+    const [reviews, setReviews] = useReview([])
     const navigate = useNavigate()
     
+    const cardSlice = reviews.slice(0, 3)
   return (
     <div>
       <div className="flex container mx-auto px-20 justify-between items-center mt-10">
@@ -36,7 +36,7 @@ const Home = () => {
         <h2 className="text-3xl font-bold">Customer reviews (3)</h2>
         <div className="grid grid-cols-3 px-20 gap-3 p-4 mt-20">
             {
-                review.map(review => <ReviewDetail review={review} key={review.id}></ReviewDetail>)
+                cardSlice.map(review => <ReviewDetail review={review} key={review.id}></ReviewDetail>)
             }
         </div>
         <div className="customer-review-all mt-20 mb-20">
