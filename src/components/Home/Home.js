@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import useReview from "../CustomHook/CustomHook";
+import useReview from "../useReview/useReview";
 import ReviewDetail from "../ReviewDetail/ReviewDetail";
 
 const Home = () => {
 
-    const [reviews, setReviews] = useReview([])
+    const [reviews] = useReview([])
     const navigate = useNavigate()
     
     const cardSlice = reviews.slice(0, 3)

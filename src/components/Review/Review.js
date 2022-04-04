@@ -1,9 +1,9 @@
 import React from 'react';
-import useReview from '../CustomHook/CustomHook';
+import useReview from '../useReview/useReview';
 import ReviewDetail from '../ReviewDetail/ReviewDetail';
 
 const Review = () => {
-    const [reviews, setReviews] = useReview([])
+    const [reviews] = useReview([])
 
     return (
         <div>
