@@ -23,7 +23,10 @@ const Home = () => {
             reading <span style={{ color: "#3B719F" }}>Books</span>
           </h2>
         </div>
+        <div className="homepage-description">
         <p className="text-xl mt-5 text-zinc-600	">Different writers write books in different categories in the world. Some writes technical books like Jhankar Mahbub and some writes knowledgeable books by which we can improve ourselves. Books are not only way to increase our knowledge but books are best friends of us.</p>
+        <button className="float-left uppercase bg-blue-400 p-4 rounded-md font-bold text-white my-5">live demo</button>
+        </div>
         </div>
         <div className="homepage-image">
           <img className=" shadow-xl rounded-lg"
