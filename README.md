@@ -1,6 +1,5 @@
-# Project Name
-## Books Analyzer
-Live Site: https://books-analyzer.netlify.app/
+# Project Name: Books Analyzer
+## Live Site: https://books-analyzer.netlify.app/
 
 # What I have done in this project
 <ul>
